@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.Date"%>
 <%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -18,19 +18,19 @@
             </div>
         </nav>
         <%! 
-        // º¯¼ö, ¸Ş¼Òµå ¼±¾ğ 
-        String greeting = "À¥ ¼îÇÎ¸ô¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù."; 
+        // ë³€ìˆ˜, ë©”ì†Œë“œ ì„ ì–¸ 
+        String greeting = "ì›¹ ì‡¼í•‘ëª°ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤."; 
         String tagline = "Welcome to Web Market!"; 
         %> 
         <% 
-        // ´Ü¼øÇÑ ÀÚ¹ÙÄÚµå 
+        // ë‹¨ìˆœí•œ ìë°”ì½”ë“œ 
         // out.println("Hello World"); 
         %>
-        <!-- p-5 : paddind max(3ÀÌ º¸Åë) / bg-primary : ±âº»»ö»ó background / text-white : text ÇÏ¾á»ö -->
+        <!-- p-5 : paddind max(3ì´ ë³´í†µ) / bg-primary : ê¸°ë³¸ìƒ‰ìƒ background / text-white : text í•˜ì–€ìƒ‰ -->
         <div class="p-5 bg-primary text-white">
-        	<!-- container : ÁÂ¿ì °¡¿îµ¥ Á¤·Ä -->
+        	<!-- container : ì¢Œìš° ê°€ìš´ë° ì •ë ¬ -->
             <div class="container">
-            	<!-- display-3 : Å« ±ÛÀÚÁß º¸ÅëÅ©±â -->
+            	<!-- display-3 : í° ê¸€ìì¤‘ ë³´í†µí¬ê¸° -->
                 <h1 class="display-3"><%= greeting %></h1>
             </div>
         </div>
@@ -42,7 +42,7 @@
 	                <%
 	                	Date today = new Date();
 	                	SimpleDateFormat df = new SimpleDateFormat("hh:mm:ss a");
-	                	out.println("ÇöÀç Á¢¼Ó ½Ã°£: " + df.format(today));
+	                	out.println("í˜„ì¬ ì ‘ì† ì‹œê°„: " + df.format(today));
 	                %>
 	            </div>
 	        </div>
