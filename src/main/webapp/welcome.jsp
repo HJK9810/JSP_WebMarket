@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page import="java.util.Date"%>
+<%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
         </nav>
         <%! 
         // 변수, 메소드 선언 
-        String greeting = "Welcome to Web Shopping Mall"; 
+        String greeting = "웹 쇼핑몰에 오신 것을 환영합니다."; 
         String tagline = "Welcome to Web Market!"; 
         %> 
         <% 
@@ -38,6 +39,11 @@
 	        <div class="container">
 	            <div class="text-center">
 	                <h3><%= tagline %></h3>
+	                <%
+	                	Date today = new Date();
+	                	SimpleDateFormat df = new SimpleDateFormat("hh:mm:ss a");
+	                	out.println("현재 접속 시간: " + df.format(today));
+	                %>
 	            </div>
 	        </div>
         </main>
