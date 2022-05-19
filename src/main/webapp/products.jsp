@@ -31,8 +31,8 @@
 	<div class="container">
 		<div class="row text-center">
 			<%
-			for (int i = 0; i < products.size(); i++) {
-				Product product = products.get(i);
+				for (int i = 0; i < products.size(); i++) {
+					Product product = products.get(i);
 			%>
 			<div class="col-md-4">
 				<h3><%=product.getProductName()%></h3>
@@ -40,7 +40,7 @@
 				<p><%=product.getUnitPrice()%></p>
 			</div>
 			<%
-			}
+				}
 			%>
 		</div>
 	</div>
