@@ -2,7 +2,12 @@
 	<div class="container">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="./welcome.jsp">Home</a>
-			<a class="navbar-brand" href="./products.jsp">Products</a>
+		</div>
+		<div class="d-flex">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="./products.jsp">Products</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>
