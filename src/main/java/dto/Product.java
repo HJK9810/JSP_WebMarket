@@ -73,10 +73,10 @@ public class Product implements Serializable {
 		this.condition = condition;
 	}
 
-	@Override
-	public String toString() {
-		return "Product [productId=" + productId + ", productName=" + productName + ", unitPrice=" + unitPrice
-				+ ", description=" + description + ", manufacturer=" + manufacturer + ", category=" + category
-				+ ", unitsInStock=" + unitsInStock + ", condition=" + condition + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Product [productId=" + productId + ", productName=" + productName + ", unitPrice=" + unitPrice
+//				+ ", description=" + description + ", manufacturer=" + manufacturer + ", category=" + category
+//				+ ", unitsInStock=" + unitsInStock + ", condition=" + condition + "]";
+//	}
 }
