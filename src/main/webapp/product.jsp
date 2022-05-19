@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>상품 목록</title>
+<title>Insert title here</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 	rel="stylesheet" />
@@ -22,30 +22,37 @@
 		<!-- container : 좌우 가운데 정렬 -->
 		<div class="container">
 			<!-- display-3 : 큰 글자중 보통크기 -->
-			<h1 class="display-3">상품 목록</h1>
+			<h1 class="display-3">상품 정보</h1>
 		</div>
 	</div>
 	<%
-	List<Product> products = repository.getAllProducts();
+	// product.jsp?id=상품아이디 이런식으로 넘어온 id값 받기
+	String id = request.getParameter("id");
+	Product product = repository.getProductById(id);
 	%>
 	<div class="container">
-		<div class="row text-center">
-			<%
-				for (int i = 0; i < products.size(); i++) {
-					Product product = products.get(i);
-			%>
-			<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-6">
 				<h3><%=product.getProductName()%></h3>
 				<p><%=product.getDescription()%></p>
-				<p><%=product.getUnitPrice()%></p>
 				<p>
-					<a class="btn btn-secondary" role="button"
-						href="./product.jsp?id=<%=product.getProductId()%>">상세 정보 &raquo;></a>
+					<b>상품코드 : </b><span class="badge bg-danger"><%=product.getProductId()%></span>
+				</p>
+				<p>
+					<b>제조사 : </b><%=product.getManufacturer()%>
+				</p>
+				<p>
+					<b>분류 : </b><%=product.getCategory()%>
+				</p>
+				<p>
+					<b>재고 수 : </b><%=product.getUnitsInStock()%>
+				</p>
+				<h4><%=product.getUnitPrice()%>원</h4>
+				<p>
+					<a href="#" class="btn btn-info"> 상품 주문 &raquo;</a> 
+					<a href="./products.jsp" class="btn btn-secondary"> 상품 목록 &raquo;</a>
 				</p>
 			</div>
-			<%
-				}
-			%>
 		</div>
 	</div>
 	<jsp:include page="footer.jsp"></jsp:include>

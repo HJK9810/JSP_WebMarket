@@ -20,7 +20,7 @@
 		String tagline = "Welcome to Web Market!";
 	%>
 	<!-- p-5 : paddind max(3이 보통) / bg-primary : 기본색상 background / text-white : text 하얀색 -->
-	<div class="p-5 bg-primary text-white">
+	<div class="mb-4 p-5 bg-primary text-white">
 		<!-- container : 좌우 가운데 정렬 -->
 		<div class="container">
 			<!-- display-3 : 큰 글자중 보통크기 -->
@@ -33,6 +33,8 @@
 			<div class="text-center">
 				<h3><%=tagline%></h3>
 				<%
+					// 초당 한번씩 메인페이지 새로고침
+					response.setIntHeader("Refresh", 1);
 					Date today = new Date();
 					SimpleDateFormat df = new SimpleDateFormat("hh:mm:ss a");
 					out.println("현재 접속 시간: " + df.format(today));
