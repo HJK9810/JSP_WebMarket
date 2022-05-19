@@ -39,4 +39,10 @@ public class ProductRepository {
 	public List<Product> getAllProducts() {
 		return products;
 	}
+	
+	// 상품 ID로 상품찾기 - stream사용 -> 1. filter로 찾기 2. 그 중에서 첫번째값 3. get으로 가져오기
+	// 동일 코드는 for문 & if문 사용
+	public Product getProductById(String productId) {
+		return products.stream().filter(product -> product.getProductId().equals(productId)).findFirst().get();
+	}
 }

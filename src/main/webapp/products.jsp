@@ -38,6 +38,10 @@
 				<h3><%=product.getProductName()%></h3>
 				<p><%=product.getDescription()%></p>
 				<p><%=product.getUnitPrice()%></p>
+				<p>
+					<a class="btn btn-secondary" role="button"
+						href="./product.jsp?id=<%=product.getProductId()%>">상세 정보 &raquo;></a>
+				</p>
 			</div>
 			<%
 				}
