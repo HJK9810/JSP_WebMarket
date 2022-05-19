@@ -22,7 +22,7 @@
 	<!-- p-5 : paddind max(3이 보통) / bg-primary : 기본색상 background / text-white : text 하얀색 -->
 	<div class="mb-4 p-5 bg-primary text-white">
 		<!-- container : 좌우 가운데 정렬 -->
-		<div class="container">
+		<div class="container text-center">
 			<!-- display-3 : 큰 글자중 보통크기 -->
 			<h1 class="display-3"><%=greeting%></h1>
 		</div>
