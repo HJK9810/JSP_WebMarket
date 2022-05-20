@@ -24,6 +24,9 @@
 		</div>
 	</div>
 	<%
+	out.println(session.getAttribute("name"));
+	out.println(session.getAttribute("age"));
+	
 	ProductRepository repository = ProductRepository.getInstance();
 	List<Product> products = repository.getAllProducts();
 	%>
