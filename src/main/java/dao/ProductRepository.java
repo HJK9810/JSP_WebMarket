@@ -8,6 +8,12 @@ import dto.Product;
 // 상품 제공용 class
 public class ProductRepository {
 	private List<Product> products = new ArrayList<>();
+	// 하나의 객체 생성후 인스턴스 재사용하는 싱글턴 패턴
+	private static ProductRepository instance = new ProductRepository();
+	
+	public static ProductRepository getInstance() {
+		return instance;
+	}
 
 	public ProductRepository() {
 		Product phone = new Product("P1234", "iPhone 6s", 800000);
@@ -44,5 +50,10 @@ public class ProductRepository {
 	// 동일 코드는 for문 & if문 사용
 	public Product getProductById(String productId) {
 		return products.stream().filter(product -> product.getProductId().equals(productId)).findFirst().get();
+	}
+	
+	// 상품 등록
+	public void addProduct(Product product) {
+		products.add(product);
 	}
 }
