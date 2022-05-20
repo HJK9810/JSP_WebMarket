@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<% String cartId = session.getId(); %>
 <title>장바구니</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -28,7 +29,7 @@
 		<div class="row">
 			<table>
 				<tr>
-					<td align="left"><a href="#" class="btn btn-warning">삭제하기</a></td>
+					<td align="left"><a href="./deleteCart.jsp?cartId=<%=cartId %>" class="btn btn-warning">삭제하기</a></td>
 					<td align="right"><a href="#" class="btn btn-success">주문하기</a></td>
 				</tr>
 			</table>
@@ -58,7 +59,7 @@
 					<td><%=product.getUnitPrice() %></td>
 					<td><%=product.getQuantity() %></td>
 					<td><%=total %></td>
-					<td><a href="#" class="badge badge-danger">삭제</a></td>
+					<td><a href="./removeCart.jsp?id=<%=product.getProductId() %>" class="badge badge-danger">삭제</a></td>
 				</tr>
 				<%
 				}
