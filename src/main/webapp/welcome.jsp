@@ -38,8 +38,6 @@
 					Date today = new Date();
 					SimpleDateFormat df = new SimpleDateFormat("hh:mm:ss a");
 					out.println("현재 접속 시간: " + df.format(today));
-					session.setAttribute("name", "John");
-					session.setAttribute("age", 24);
 				%>
 			</div>
 		</div>
