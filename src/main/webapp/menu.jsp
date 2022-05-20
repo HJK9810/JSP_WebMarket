@@ -7,6 +7,8 @@
 			<ul class="navbar-nav">
 				<li class="nav-item"><a class="nav-link" href="./products.jsp">Products</a>
 				</li>
+				<li class="nav-item"><a class="nav-link" href="./addProduct.jsp">Add</a>
+				</li>
 			</ul>
 		</div>
 	</div>
