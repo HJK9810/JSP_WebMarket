@@ -12,10 +12,18 @@
 	String description = request.getParameter("description");
 	String manufacturer = request.getParameter("manufacturer");
 	String category = request.getParameter("category");
-	String unitsInStock = request.getParameter("unitsInStock");
+	int unitsInStock = Integer.parseInt(request.getParameter("unitsInStock"));
 	String condition = request.getParameter("condition");
 	
-	Product newProduct = new Product(productId, productName, unitPrice);
+	Product newProduct = new Product();
+	newProduct.setProductId(productId);
+	newProduct.setProductName(productName);
+	newProduct.setUnitPrice(unitPrice);
+	newProduct.setDescription(description);
+	newProduct.setManufacturer(manufacturer);
+	newProduct.setCategory(category);
+	newProduct.setUnitsInStock(unitsInStock);
+	newProduct.setCondition(condition);
 	
 	ProductRepository repository = ProductRepository.getInstance();
 	repository.addProduct(newProduct);
