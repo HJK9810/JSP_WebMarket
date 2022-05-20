@@ -2,9 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.List"%>
 <%@ page import="dto.Product"%>
-<!-- class를 id라는 이름으로 사용하겠다는 의미 / session : 서버측에 저장 -->
-<jsp:useBean id="repository" class="dao.ProductRepository"
-	scope="session"></jsp:useBean>
+<%@ page import="dao.ProductRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +24,7 @@
 		</div>
 	</div>
 	<%
+		ProductRepository repository = ProductRepository.getInstance();
 		// product.jsp?id=상품아이디 이런식으로 넘어온 id값 받기
 		String id = request.getParameter("id");
 		Product product = repository.getProductById(id);
