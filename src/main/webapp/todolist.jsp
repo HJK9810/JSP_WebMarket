@@ -24,7 +24,6 @@
 	}
 
 	function addTodo() {
-		console.log('click!!');
 		// post 방식으로 task 전송
 		const task = $("#text").val();
 		
@@ -52,7 +51,6 @@
 <body>
 	<%
 	TodoRepository repository = TodoRepository.getInstance();
-	out.println(repository.getTodos());
 	List<Todo> todos = repository.getTodos();
 	%>
 	<div class="todo-list-template">
