@@ -16,7 +16,7 @@
 <script>
 	function setDone(id) {
 		$.ajax({
-            url: "processToggle.jsp",
+            url: "toggleTodo.do",
             type: "post",
             data: { id: id },
             success: (data) => window.location.reload(),
@@ -29,7 +29,7 @@
 		
 		if (task) {
             $.ajax({
-                url: "processAddTodo.jsp",
+                url: "addTodo.do",
                 type: "post",
                 data: { task: task },
                 success: (data) => window.location.reload(),
@@ -39,7 +39,7 @@
 
 	function remove(id) {
 		$.ajax({
-            url: "processRemoveTodo.jsp",
+            url: "removeTodo.do",
             type: "post",
             data: { id: id },
             success: (data) => window.location.reload(),
