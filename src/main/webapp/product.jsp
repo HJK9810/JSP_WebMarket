@@ -59,7 +59,7 @@
 				<p>
 					<form name="addForm" action="./addCart.jsp?id=<%=product.getProductId() %>" method="post">
 						<a href="#" class="btn btn-info" onclick="addToCart()"> 상품 주문 &raquo;</a> 
-						<a href="./cart.jsp" class="btn btn-warning"> 상품 목록 &raquo;</a>
+						<a href="./cart.jsp" class="btn btn-warning"> 장바구니 &raquo;</a>
 						<a href="./products.jsp" class="btn btn-secondary"> 상품 목록 &raquo;</a>
 					</form>
 				</p>

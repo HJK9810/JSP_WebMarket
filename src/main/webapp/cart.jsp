@@ -34,7 +34,7 @@
 				</tr>
 			</table>
 		</div>
-		<div style="padding-top: 50px;">
+		<div class="pt-5">
 			<table class="table table-hover">
 				<tr>
 					<th>상품</th>
@@ -72,7 +72,7 @@
 					<th></th>
 				</tr>
 			</table>
-			<a href="./porducts.jsp" class="btn btn-scondary"> &laquo; 쇼핑
+			<a href="./products.jsp" class="btn btn-scondary"> &laquo; 쇼핑
 				계속하기</a>
 		</div>
 	</div>
