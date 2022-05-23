@@ -58,8 +58,8 @@
 
 		<section class="form-wrapper">
 			<div class="form">
-				<input name="text" id="text" />
-				<div class="create-button" onclick="addTodo();">추가</div>
+				<input name="text" id="text" onKeyPress="if (event.keyCode==13) addTodo()" />
+				<div class="create-button" onclick="addTodo()">추가</div>
 			</div>
 		</section>
 
