@@ -9,7 +9,6 @@
 <link rel="stylesheet" type="text/css" href="./assets/css/form.css" />
 <link rel="stylesheet" type="text/css" href="./assets/css/todoitem.css" />
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="./assets/js/common.js"></script>
 <meta charset="UTF-8">
 <title>Todo List</title>
 <script>
@@ -19,12 +18,13 @@
 	function addTodo() {
 		console.log('click!!');
 		// post 방식으로 task 전송
-		// postData('processAddTodo.jsp', {"task":'test'});
+		let task = $("#text").val();
 		$.ajax({
-			url: "processAddTodo.jsp",
-			type: "post",
-			data: {"task": "test"}
-		});
+            url: "processAddTodo.jsp",
+            type: "post",
+            data: { task: task },
+            success: (data) => window.location.reload()
+        });
 	}
 
 	function remove(id) {
