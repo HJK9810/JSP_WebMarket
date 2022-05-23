@@ -26,4 +26,13 @@ public class TodoRepository {
 		currentId++;
 		todos.add(todo);
 	}
+	
+	public void toggle(long id) {
+		for(Todo todo : todos) {
+			if(todo.getId() == id) {
+				todo.setDone(!todo.isDone());
+				break;
+			}
+		}
+	}
 }
