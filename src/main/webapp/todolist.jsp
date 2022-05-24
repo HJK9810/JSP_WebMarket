@@ -14,6 +14,10 @@
 <meta charset="UTF-8">
 <title>Todo List</title>
 <script>
+	$(() => {
+		$('#text').focus();
+	});
+	
 	function setDone(id) {
 		$.ajax({
             url: "toggleTodo.do",
